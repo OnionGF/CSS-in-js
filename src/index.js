@@ -1,13 +1,29 @@
+/*
+ * @Author: onino
+ * @Date: 2022-10-04 10:36:10
+ * @LastEditors: onino
+ * @LastEditTime: 2022-10-04 13:25:22
+ * @Description: 请填写简介
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@emotion/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const theme = {
+  colors: {
+    primary: 'tomato'
+  }
+}
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
